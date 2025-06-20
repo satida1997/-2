@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กระแหร่ง Food&Bakery - สั่งอาหาร</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">กระแหร่ง Food&Bakery</h1>
+            <p class="tagline">สั่งอาหารง่ายๆ เหมือนฟีดโปรดของคุณ!</p>
+        </header>
+
+        <main class="main-content">
+            <section class="menu-section">
+                <h2 class="section-title">เมนูอร่อย</h2>
+                <div class="menu-grid" id="menuGrid">
+                    </div>
+            </section>
+
+            <section class="order-summary-section">
+                <h2 class="section-title">รายการที่สั่ง</h2>
+                <div id="orderSummary" class="order-summary">
+                    <p class="empty-cart-message">ยังไม่มีรายการสั่งซื้อ</p>
+                </div>
+                <div class="total-price">
+                    <strong>รวมเป็นเงิน: <span id="totalPrice">0</span> บาท</strong>
+                </div>
+            </section>
+
+            <section class="customer-info-section">
+                <h2 class="section-title">ข้อมูลลูกค้า</h2>
+                <form id="orderForm" class="customer-form">
+                    <div class="form-group">
+                        <label for="firstName">ชื่อ:</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">นามสกุล:</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">เบอร์โทร:</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" placeholder="08XXXXXXXX" required>
+                    </div>
+                    <button type="submit" class="submit-button">ส่งข้อมูลการสั่งซื้อ</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
